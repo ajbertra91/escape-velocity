@@ -1198,7 +1198,7 @@ ol.default {
       border: solid 10px #fff; }
 
 #header-wrapper {
-  background: url("../../images/banner.jpg") center center;
+  background: url("./images/banner.jpg") center center;
   background-size: cover; }
   #header-wrapper:before {
     content: '';
