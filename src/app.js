@@ -1,10 +1,9 @@
 export class App {
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'Escape Velocity';
     config.map([
       { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
+      { route: 'lesson-plans',  name: 'lesson-plans', moduleId: 'lesson-plans', nav: true, title: 'Lesson Plans' }
     ]);
 
     this.router = router;
