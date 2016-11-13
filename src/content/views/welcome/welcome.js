@@ -1,11 +1,15 @@
-//import {computedFrom} from 'aurelia-framework';
+import {inject} from 'aurelia-framework';
+import {quotes} from 'content/config/quotes'
+import {features} from 'content/config/features'
 
+@inject(Element)
 export class Welcome {
-  
-
-  canDeactivate() {
-    if (this.fullName !== this.previousValue) {
-      return confirm('Are you sure you want to leave?');
-    }
+  constructor(Element) {
+    this.element = Element;
+    this.quotes = quotes();
+    this.features = features().features;
+  }
+  bind() {
+    this.headerQuote = this.quotes.getRandomQuote();
   }
 }

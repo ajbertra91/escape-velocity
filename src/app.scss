@@ -248,7 +248,7 @@ article:last-child {
 }
 
 header {
-  background-color: black;
+  // background-color: black;
   &.style1 {
     text-align: center;
 
@@ -293,9 +293,12 @@ header {
     }
 
     &.featured {
-      display: block;
       width: 100%;
       margin: 0 0 2em 0;
+      max-height: 260px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -324,7 +327,7 @@ header {
     }
 
     &.style1 {
-      background: #e97770 url('images/overlay.png');
+      background: #e97770 url('dist/images/overlay.png');
       color: #fff;
 
       &:hover {
@@ -351,7 +354,7 @@ header {
     }
 
     &.style3 {
-      background: #2f333b url('images/overlay.png');
+      background: #2f333b url('dist/images/overlay.png');
       color: #fff;
 
       &:hover {
@@ -426,7 +429,7 @@ header {
         position: relative;
         display: inline-block;
         color: #fff;
-        background: #2f333b url('images/overlay.png');
+        background: #2f333b url('dist/images/overlay.png');
         border-radius: 1em;
         text-align: center;
       }
@@ -473,32 +476,38 @@ header {
       &:before {
         content: '';
         position: absolute;
-        bottom: -38px;
-        left: -35px;
+        bottom: -17px;
+        left: -34px;
         width: 35px;
-        height: 38px;
+        height: 17px;
         background: url('images/shadow.png');
+        background-image: linear-gradient(390deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8));
+        border-right: 1px solid rgba(0,0,0,0.3);
+        opacity: 0.4;
       }
 
       &:after {
         @include vendor('transform', 'scaleX(-1)');
         content: '';
         position: absolute;
-        bottom: -38px;
-        right: -35px;
+        bottom: -17px;
+        right: -34px;
         width: 35px;
-        height: 38px;
+        height: 17px;
         background: url('images/shadow.png');
+        background-image: linear-gradient(390deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8));
+        border-right: 1px solid rgba(0,0,0,0.3);
+        opacity: 0.4;
       }
     }
 
     &.style1 {
-      background: #e97770 url('images/overlay.png');
+      background: #e97770 url('dist/images/overlay.png');
       color: #eee;
       color: rgba(255, 255, 255, 0.75);
 
       .title {
-        background: #e97770 url('images/overlay.png');
+        background: #e97770 url('dist/images/overlay.png');
         color: #fff;
       }
 
@@ -517,10 +526,10 @@ header {
     }
 
     &.style3 {
-      background: #f3f3f3 url('images/overlay.png');
+      background: #f3f3f3 url('dist/images/overlay.png');
 
       .title {
-        background: #f3f3f3 url('images/overlay.png');
+        background: #f3f3f3 url('dist/images/overlay.png');
         color: #484d55;
       }
 
@@ -531,7 +540,7 @@ header {
   }
 
   #header-wrapper {
-    background: url('./images/banner.jpg') center center;
+    background: url('./images/509049212.jpg') center center;
     background-size: cover;
 
     &:before {
@@ -541,12 +550,12 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('images/overlay.png');
+      background-color: rgba(0,0,0,0.5);
     }
   }
 
   #footer-wrapper {
-    background: #282b34 url('images/overlay.png');
+    background: #282b34 url('dist/images/overlay.png');
     color: #eee;
     color: rgba(255, 255, 255, 0.5);
 
@@ -599,7 +608,7 @@ header {
     }
 
     .title {
-      background: #282b34 url('images/overlay.png');
+      background: #282b34 url('dist/images/overlay.png');
       color: #eee;
     }
 
@@ -623,7 +632,7 @@ header {
 
       h3 {
         &:before {
-          background: #3d4249 url('images/overlay.png');
+          background: #3d4249 url('dist/images/overlay.png');
         }
       }
     }
@@ -636,12 +645,14 @@ header {
       font-weight: 900;
       text-transform: uppercase;
       color: #fff;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
     }
 
     p {
       color: #eee;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 1);
       text-transform: uppercase;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
     }
   }
 
@@ -831,7 +842,7 @@ header {
         }
 
         p {
-          margin: 0 0 0 5em;
+          margin: 0 0 0 6.3em;
         }
 
         &.small {
@@ -1353,7 +1364,7 @@ header {
         top: 0;
         width: _size(navPanel);
         z-index: _misc(z-index-base) + 2;
-        background: #242730 url('images/overlay.png');
+        background: #242730 url('dist/images/overlay.png');
         box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
 
         .link {

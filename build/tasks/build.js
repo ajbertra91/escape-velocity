@@ -45,7 +45,7 @@ gulp.task('build-sass', function() {
 
 gulp.task('build-images', function() {
   return gulp.src(paths.images)
-    .pipe(changed(paths.output, {extention: '.jpg'}))
+    .pipe(changed(paths.output, {extension: 'jpg'}))
     .pipe(gulp.dest(paths.output));
 });
 
