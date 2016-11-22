@@ -1,0 +1,118 @@
+//colors
+$color_charade_approx: #282b34;
+$color_gallery_approx: #eee;
+$white_50: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$color_mine_shaft_approx: #333;
+$white_5: rgba(255, 255, 255, 0.05);
+$color_celeste_approx: #ccc;
+$white_65: rgba(255, 255, 255, 0.65);
+$white_75: rgba(255, 255, 255, 0.75);
+$color_cape_cod_approx: #3d4249;
+
+//urls
+$url_0: url(dist/images/overlay.png);
+
+#footer-wrapper {
+  background: $color_charade_approx $url_0;
+  color: $color_gallery_approx;
+  color: $white_50;
+  h1,h2,h3,h4,h5,h6,strong,b,a {
+    color: $white;
+  }
+  hr {
+    border-top-color: $color_mine_shaft_approx;
+    border-top-color: $white_5;
+  }
+  form {
+    input[type="text"] {
+      background: $color_celeste_approx;
+      box-shadow: none;
+      &:focus {
+        background: $white;
+      }
+    }
+    input[type="email"] {
+      background: $color_celeste_approx;
+      box-shadow: none;
+      &:focus {
+        background: $white;
+      }
+    }
+    input[type="password"] {
+      background: $color_celeste_approx;
+      box-shadow: none;
+      &:focus {
+        background: $white;
+      }
+    }
+    select {
+      background: $color_celeste_approx;
+      box-shadow: none;
+      &:focus {
+        background: $white;
+      }
+    }
+    textarea {
+      background: $color_celeste_approx;
+      box-shadow: none;
+      &:focus {
+        background: $white;
+      }
+    }
+  }
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  .button {
+    color: $white;
+    box-shadow: inset 0 0 2px 0 $white_50;
+    &:hover {
+      color: $white;
+      box-shadow: inset 0 0 2px 0 $white_65;
+    }
+    &:active {
+      box-shadow: inset 0 0 2px 0 $white_75;
+    }
+    &.style2:active {
+      box-shadow: inset 0 0 2px 0 $white_75;
+    }
+  }
+  .title {
+    background: $color_charade_approx $url_0;
+    color: $color_gallery_approx;
+  }
+  .feature-list {
+    section {
+      border-top-color: $color_mine_shaft_approx;
+      border-top-color: $white_5;
+    }
+    h3:before {
+      background: $color_cape_cod_approx $url_0;
+    }
+  }
+  header.style1 {
+    h2 {
+      color: $white;
+    }
+    .p {
+      color: inherit;
+    }
+  }
+  .solas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    dl {
+      flex: 0 0 auto;
+    }
+    dd {
+      font-size: 1.1 em;
+    }
+    dt {
+      font-style: italic;
+      font-size:0.75em;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<template>
+  <require from="./prayers.css"></require>
+  <require from="content/common/sidebar/sidebar"></require>
+
+  <div class="wrapper style2 prayers">
+    <div class="title">${page.title}</div>
+    <div id="main" class="container">
+      <div class="row 150%">
+        <div class="4u 12u(mobile)">
+          
+          <sidebar></sidebar>
+        
+        </div>
+        <div class="8u 12u(mobile) important(mobile)">
+
+          <!-- Content -->
+          <div id="content">
+            <article class="box post">
+              <header class="style1">
+                <h2>Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</h2>
+                <blockquote cite="https://www.blueletterbible.org/kjv/eph/6/18/s_1103018">
+                  [Eph 6:18 KJV] Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;
+                </blockquote>
+              </header>
+              <a href="#" class="image featured">
+                <img src="dist/images/artillery_fire.jpg" alt="artillery fire" />
+              </a>
+              <p><a href="https://www.blueletterbible.org/kjv/eph/6/18/s_1103018" target="_blank">Ephesians 6:18</a> reminds us that prayer is our heavy artillery in the spirtual war against the powers of darkness. Artillery commanders know they have to be very precises
+                  with their target commands, otherwise they risk friendly fire causalties. Similarly, prayer should be singularly specific. Use names. Describe exactly the desired action
+                  you would like God to take. Care about what you are praying for. Put some emotional skin in the game. We have collected several prayers here to help you get started teaching and using effective prayers.
+              </p>
+            </article>
+            <div class="row 150%">
+              <header class="12u">
+                <h2>Childrens' Prayers</h2>
+              </header>
+              <div class="6u 12u(mobile)" repeat.for="prayer of prayers">
+                <section class="box">
+                  <header>
+                    <h3>${prayer.title}</h3>
+                  </header>
+                  <!-- <a href="#" class="image featured"><img src="dist/images/pic05.jpg" alt="" /></a> -->
+                  <div innerhtml.bind="prayer.content"></div>
+                  <a href=`/prayer/${prayer.tite}` class="button style1">More</a>
+                </section>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

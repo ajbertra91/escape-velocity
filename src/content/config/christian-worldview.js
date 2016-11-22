@@ -1,5 +1,5 @@
-export function features() {
-    const features = [
+export function christianWorldview() {
+    return [
         {
             title: 'What is Truth?'
             ,imageClass: 'fa-cube'
@@ -56,5 +56,4 @@ export function features() {
         //     ,text: ''
         // }
     ];
-    return {features}
 }

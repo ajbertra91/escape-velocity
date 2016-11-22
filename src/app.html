@@ -1,22 +1,24 @@
 <template>
   <require from="app.css"></require>
+  <require from="content/common/app-footer/app-footer"></require>
   <require from="content/common/nav-bar/nav-bar.html"></require>
-  <require from="bootstrap/css/bootstrap.css"></require>
 
   <div id="header-wrapper" class="wrapper">
     <div id="header">
 
-        <nav-bar router.bind="router"></nav-bar>
+      <nav-bar router.bind="router"></nav-bar>
 
-        <div id="logo">
-            <h1><a href="/index.html">Escape Velocity</a></h1>
-            <p>Christian Youth Ministry Resources</p>
-        </div>
-
+      <div id="logo">
+          <h1><a href="/index.html">Escape Velocity</a></h1>
+          <p>Christian Youth Ministry Resources</p>
+      </div>
     </div>
   </div>
 
   <div id="page-wrapper">
     <router-view></router-view>
   </div>
+
+  <app-footer></app-footer>
+
 </template>

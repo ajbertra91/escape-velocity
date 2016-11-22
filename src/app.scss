@@ -62,7 +62,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #484d55;
+  color: $dark-gray;
 
   a {
     color: inherit;
@@ -82,7 +82,7 @@ a {
 
 strong, b {
   font-weight: 700;
-  color: #484d55;
+  color: $dark-gray;
 }
 
 blockquote {
@@ -149,7 +149,7 @@ table {
     }
 
     thead {
-      background: #484d55;
+      background: $dark-gray;
       color: #fff;
     }
 
@@ -165,7 +165,7 @@ form {
   label {
     display: block;
     font-weight: 700;
-    color: #484d55;
+    color: $dark-gray;
   }
 
   input[type="text"],
@@ -323,15 +323,15 @@ header {
     cursor: pointer;
 
     &:hover {
-      background-color: #f98780;
+      background-color: $ev-light-green;
     }
 
     &.style1 {
-      background: #e97770 url('dist/images/overlay.png');
+      background: $ev-green;
       color: #fff;
 
       &:hover {
-        background-color: #f98780;
+        background-color: $ev-light-green;
       }
 
       &:active {
@@ -354,7 +354,7 @@ header {
     }
 
     &.style3 {
-      background: #2f333b url('dist/images/overlay.png');
+      background: #2f333b;
       color: #fff;
 
       &:hover {
@@ -423,13 +423,13 @@ header {
 
   .feature-list {
     h3 {
-      color: #e97770 !important;
+      color: $ev-green !important;
 
       &:before {
         position: relative;
         display: inline-block;
         color: #fff;
-        background: #2f333b url('dist/images/overlay.png');
+        background: #2f333b;
         border-radius: 1em;
         text-align: center;
       }
@@ -502,12 +502,12 @@ header {
     }
 
     &.style1 {
-      background: #e97770 url('dist/images/overlay.png');
+      background: $ev-green;
       color: #eee;
       color: rgba(255, 255, 255, 0.75);
 
       .title {
-        background: #e97770 url('dist/images/overlay.png');
+        background: $ev-green;
         color: #fff;
       }
 
@@ -521,16 +521,16 @@ header {
 
       .title {
         background: #fff;
-        color: #484d55;
+        color: $dark-gray;
       }
     }
 
     &.style3 {
-      background: #f3f3f3 url('dist/images/overlay.png');
+      background: #f3f3f3;
 
       .title {
-        background: #f3f3f3 url('dist/images/overlay.png');
-        color: #484d55;
+        background: #f3f3f3;
+        color: $dark-gray;
       }
 
       .image {
@@ -551,90 +551,6 @@ header {
       width: 100%;
       height: 100%;
       background-color: rgba(0,0,0,0.5);
-    }
-  }
-
-  #footer-wrapper {
-    background: #282b34 url('dist/images/overlay.png');
-    color: #eee;
-    color: rgba(255, 255, 255, 0.5);
-
-    h1, h2, h3, h4, h5, h6, strong, b, a {
-      color: #fff;
-    }
-
-    hr {
-      border-top-color: #333;
-      border-top-color: rgba(255, 255, 255, 0.05);
-    }
-
-    form {
-      input[type="text"],
-      input[type="email"],
-      input[type="password"],
-      select,
-      textarea {
-        background: #ccc;
-        box-shadow: none;
-
-        &:focus {
-          background: #fff;
-        }
-      }
-    }
-
-    input[type="button"],
-    input[type="submit"],
-    input[type="reset"],
-    button,
-    .button {
-      color: #fff;
-      box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
-
-      &:hover {
-        color: #fff;
-        box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.65);
-      }
-
-      &:active {
-        box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
-      }
-
-      &.style2 {
-        &:active {
-          box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
-        }
-      }
-    }
-
-    .title {
-      background: #282b34 url('dist/images/overlay.png');
-      color: #eee;
-    }
-
-    header {
-      &.style1 {
-        h2 {
-          color: #fff;
-        }
-
-        .p {
-          color: inherit;
-        }
-      }
-    }
-
-    .feature-list {
-      section {
-        border-top-color: #333;
-        border-top-color: rgba(255, 255, 255, 0.05);
-      }
-
-      h3 {
-        &:before {
-          background: #3d4249 url('dist/images/overlay.png');
-        }
-      }
     }
   }
 
@@ -679,7 +595,7 @@ header {
       text-align: center;
 
       h3 {
-        color: #e97770;
+        color: $ev-green;
       }
     }
   }
@@ -842,7 +758,7 @@ header {
         }
 
         p {
-          margin: 0 0 0 6.3em;
+          margin: 0 0 0 5em;
         }
 
         &.small {
@@ -1364,7 +1280,7 @@ header {
         top: 0;
         width: _size(navPanel);
         z-index: _misc(z-index-base) + 2;
-        background: #242730 url('dist/images/overlay.png');
+        background: #242730;
         box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
 
         .link {

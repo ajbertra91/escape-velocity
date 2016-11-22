@@ -1,13 +1,13 @@
 import {inject} from 'aurelia-framework';
 import {quotes} from 'content/config/quotes'
-import {features} from 'content/config/features'
+import {christianWorldview} from 'content/config/christian-worldview'
 
 @inject(Element)
 export class Welcome {
   constructor(Element) {
     this.element = Element;
     this.quotes = quotes();
-    this.features = features().features;
+    this.christianWorldview = christianWorldview();
   }
   bind() {
     this.headerQuote = this.quotes.getRandomQuote();
