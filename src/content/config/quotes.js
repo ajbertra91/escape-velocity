@@ -10,6 +10,11 @@ export function quotes() {
             ,author: 'Nancy Pearcey'
             ,source: 'Saving Leonardo'
         }
+        ,{
+            text: 'A worldview is a framework of fundamental concepts of beliefs about the world. In short, a worldview comprises the lens through which we see the world.'
+            ,author: 'Michael Wittmer'
+            ,source: 'Heaven is a Place on Earth, 21.'
+        }
         // ,{
         //     text: ''
         //     ,author: ''
@@ -22,8 +27,15 @@ export function quotes() {
     function getRandomQuote() {
         return quotes[getRandomInt(0,quotes.length-1)];
     }
-
+    function getAllQuotes() {
+        return quotes;
+    }
+    function getQuotesFrom(auth) {
+        return quotes.filter(q => q.author === auth);
+    }
     return {
-        getRandomQuote: getRandomQuote
+        getRandomQuote
+        ,getAllQuotes
+        ,getQuotesFrom
     };
 }

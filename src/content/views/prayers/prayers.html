@@ -3,7 +3,7 @@
   <require from="content/common/sidebar/sidebar"></require>
 
   <div class="wrapper style2 prayers">
-    <div class="title">${page.title}</div>
+    <div class="title">Spiritual Warfare</div>
     <div id="main" class="container">
       <div class="row 150%">
         <div class="4u 12u(mobile)">
@@ -17,23 +17,21 @@
           <div id="content">
             <article class="box post">
               <header class="style1">
-                <h2>Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</h2>
-                <blockquote cite="https://www.blueletterbible.org/kjv/eph/6/18/s_1103018">
-                  [Eph 6:18 KJV] Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;
-                </blockquote>
+                <h2>Prayer</h2>
               </header>
-              <a href="#" class="image featured">
-                <img src="dist/images/artillery_fire.jpg" alt="artillery fire" />
-              </a>
+              <span class="image featured">
+                <img src="dist/images/artillery_fire.jpg" alt="US Army soldiers firing howitzer" />
+                <label style="font-style:italic; font-size:0.75em;">US Army soldiers firing howitzer</label>
+              </span>
+              <blockquote cite="https://www.blueletterbible.org/kjv/eph/6/18/s_1103018">
+                [Eph 6:18 KJV] Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;
+              </blockquote>
               <p><a href="https://www.blueletterbible.org/kjv/eph/6/18/s_1103018" target="_blank">Ephesians 6:18</a> reminds us that prayer is our heavy artillery in the spirtual war against the powers of darkness. Artillery commanders know they have to be very precises
                   with their target commands, otherwise they risk friendly fire causalties. Similarly, prayer should be singularly specific. Use names. Describe exactly the desired action
                   you would like God to take. Care about what you are praying for. Put some emotional skin in the game. We have collected several prayers here to help you get started teaching and using effective prayers.
               </p>
             </article>
             <div class="row 150%">
-              <header class="12u">
-                <h2>Childrens' Prayers</h2>
-              </header>
               <div class="6u 12u(mobile)" repeat.for="prayer of prayers">
                 <section class="box">
                   <header>
@@ -41,8 +39,16 @@
                   </header>
                   <!-- <a href="#" class="image featured"><img src="dist/images/pic05.jpg" alt="" /></a> -->
                   <div innerhtml.bind="prayer.content"></div>
-                  <a href=`/prayer/${prayer.tite}` class="button style1">More</a>
+                  <a href="#/prayers/${prayer.slug}" class="button style1">More</a>
                 </section>
+              </div>
+            </div>
+            
+            <div class="row 150%">
+              <div class="12u">
+                <blockquote cite="https://dfisher2014dotcom.wordpress.com/2015/01/31/the-gethsemane-prayer/">
+                  For most of us the prayer in Gethsemane is the only model. Removing mountains can wait.<br>&mdash;C.S. Lewis
+                </blockquote>
               </div>
             </div>
           </div>

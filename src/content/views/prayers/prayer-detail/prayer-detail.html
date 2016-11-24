@@ -1,0 +1,35 @@
+<template>
+  <require from="./prayer-detail.css"></require>
+  <require from="content/common/sidebar/sidebar"></require>
+
+  <div class="wrapper style2 prayer">
+    <div class="title">${page.title}</div>
+    <div id="main" class="container">
+      <div class="row 150%">
+        <div class="4u 12u(mobile)">
+          
+          <sidebar></sidebar>
+        
+        </div>
+        <div class="8u 12u(mobile) important(mobile)">
+
+          <!-- Content -->
+          <div id="content">
+            <article class="box post">
+            
+              <header class="style1">
+                <h2>${prayer.title}</h2>
+              </header>
+
+              <span class="image featured"><img src="dist/images/389815183.jpg" alt="woman praying" /></span>
+              
+              <p innerhtml.bind="prayer.content" style="text-align:center;"></p>
+            
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

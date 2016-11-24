@@ -4,19 +4,22 @@ import {getCurrentSlug} from 'content/utilities/helpers';
 export class Prayers {
   constructor() {
     this.page = {};
-    this.prayers = null;
+    this.prayer = null;
+    this.slug = getCurrentSlug();
   }
   activate(params, navConfig) {
     this.page.title = navConfig.name;
+  }
+
+  bind() {
     this.getContent();
-    console.log('getCurrentSlug: ', getCurrentSlug());
   }
 
   getContent() {
-    return serviceProxy({url:`https://api.cosmicjs.com/v1/escape-velocity/object-type/${this.page.title.toLowerCase()}?pretty=true`})
+    return serviceProxy({url:`https://api.cosmicjs.com/v1/escape-velocity/object/${this.slug}?pretty=true`})
         .then(data => {
             console.log(data);
-            this.prayers = data.objects;
+            this.prayer = data.object;
         })
         .catch(err => new Error(err))
   }

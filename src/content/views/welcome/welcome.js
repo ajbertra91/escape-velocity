@@ -1,6 +1,7 @@
 import {inject} from 'aurelia-framework';
-import {quotes} from 'content/config/quotes'
-import {christianWorldview} from 'content/config/christian-worldview'
+import {quotes} from 'content/config/quotes';
+import {christianWorldview} from 'content/config/christian-worldview';
+import {getCurrentSlug} from 'content/utilities/helpers';
 
 @inject(Element)
 export class Welcome {
@@ -8,6 +9,7 @@ export class Welcome {
     this.element = Element;
     this.quotes = quotes();
     this.christianWorldview = christianWorldview();
+    console.log('getCurrentSlug: ', getCurrentSlug());
   }
   bind() {
     this.headerQuote = this.quotes.getRandomQuote();
