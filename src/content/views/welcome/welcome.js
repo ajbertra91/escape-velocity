@@ -9,7 +9,6 @@ export class Welcome {
     this.element = Element;
     this.quotes = quotes();
     this.christianWorldview = christianWorldview();
-    console.log('getCurrentSlug: ', getCurrentSlug());
   }
   bind() {
     this.headerQuote = this.quotes.getRandomQuote();

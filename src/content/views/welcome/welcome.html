@@ -32,11 +32,11 @@
             </header>
             <div class="feature-list">
               <div class="row">
-                
+
                 <div class="6u 12u(mobile)" repeat.for="lesson of christianWorldview">
                   <section>
                     <h3 class="icon ${lesson.imageClass}">
-                      <a href="#">Lesson ${$index + 1}: ${lesson.title}</a>
+                      <a href="#/lesson-plans/${lesson.slug}">Lesson ${$index + 1}: ${lesson.title}</a>
                     </h3>
                     <p innerhtml.bind="lesson.text"></p>
                   </section>

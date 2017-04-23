@@ -1,0 +1,69 @@
+<template>
+  <require from="./lesson-detail.css"></require>
+  <require from="content/common/sidebar/sidebar"></require>
+
+  <div class="wrapper style2 prayer">
+    <div class="title">${page.title}</div>
+    <div id="main" class="container">
+      <div class="row 150%">
+        <div class="4u 12u(mobile)">
+
+          <sidebar></sidebar>
+
+        </div>
+        <div class="8u 12u(mobile) important(mobile)">
+
+        <!-- Content -->
+        <div id="content">
+            <article class="box post">
+
+                <header class="style1">
+                    <h2>${lesson.title}</h2>
+                    <p>Estimated Time: <span>${lesson.estimatedLessonTime}</span></p>
+                    <h3 innerhtml.bind="lesson.abstract"></h3>
+                </header>
+
+                <span class="image featured"><img src="dist/images/right_wrong.jpg" alt="man deciding: right or wrong" /></span>
+
+                <section class="boxed">
+                    <h3>Opening Prayer:</h3>
+                    <p>${lesson.openingPrayer}</p>
+                </section>
+                <section class="boxed">
+                    <p>
+                        Activity: <span innerhtml.bind="lesson.activityTitle"></span>
+                        </br>
+                        Estimated Time: <span innerhtml.bind="lesson.activityTime"></span>
+                    </p>
+                    <ul class="11u -1u">
+                        <li repeat.for="item of lesson.activityInstructions" innerhtml.bind="item"></li>
+                    </ul>
+                </section>
+                <section class="boxed">
+                    <h3>Discussion Questions:</h3>
+                    <ul class="11u -1u">
+                        <li repeat.for="item of lesson.discussionQuestions" innerhtml.bind="item"></li>
+                    </ul>
+                </section>
+                <section class="boxed">
+                    <h3>Examine God's Word:</h3>
+                    <ul class="11u -1u">
+                        <li repeat.for="item of lesson.bibleVerses" style="margin-bottom: 20px;">
+                            <div innerhtml.bind="item.verse" if.bind="item.verse"></div>
+                            <div innerhtml.bind="item.comment" if.bind="item.comment"></div>
+                            <div innerhtml.bind="item.followup" if.bind="item.followup"></div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="boxed">
+                    <h3>Closing Prayer:</h3>
+                    <p>${lesson.closingPrayer}</p>
+                </section>
+            </article>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
